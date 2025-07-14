@@ -59,17 +59,18 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 flex min-h-screen flex-col">
           {/* Header */}
-          <header className="p-8">
-            <div className="max-w-screen-2xl mx-auto px-8 flex justify-between w-full">
+          <header className="p-4 sm:p-8">
+            <div className="max-w-screen-2xl mx-auto px-2 sm:px-8 flex justify-between w-full items-center">
               {/* Top Left - Right Arm */}
               <div className="text-white">
                 <span
                   style={{
-                    fontSize: "12px",
-                    fontFamily: '"Proxima Nova Regular", sans-serif',
+                    fontSize: "10px",
+                    fontFamily: 'Proxima Nova Regular, sans-serif',
                     fontWeight: "normal",
                     color: "#f4f5f3",
                   }}
+                  className="sm:text-[12px]"
                 >
                   RIGHT ARM
                 </span>
@@ -77,18 +78,18 @@ export default function HomePage() {
 
               {/* Top Right - Logo */}
               <div className="text-white" style={{ marginTop: "-10px" }}>
-                <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
+                <Image src="/logo3.png" alt="Right Arm Logo" width={100} height={70} className="w-[100px] h-[70px]" />
               </div>
             </div>
           </header>
 
           {/* Main Content - Center */}
-          <main className="flex flex-1 items-center justify-center px-8">
+          <main className="flex flex-1 items-center justify-center px-2 sm:px-8">
             <AnimatedDiv direction="down" delay={200} className="text-center text-white">
               <AnimatedDiv direction="down" delay={400}>
                 <h1
-                  className="mb-4 tracking-wide"
-                  style={{ fontSize: "81.3px", fontFamily: '"The Seasons", serif', fontWeight: "normal" }}
+                  className="mb-4 tracking-wide text-[32px] sm:text-[81.3px]"
+                  style={{ fontFamily: 'The Seasons, serif', fontWeight: "normal" }}
                 >
                   Tourism business
                 </h1>
@@ -96,11 +97,11 @@ export default function HomePage() {
               <AnimatedDiv
                 direction="up"
                 delay={600}
+                className="text-[13px] sm:text-[17.1px]"
                 style={{
-                  fontSize: "17.1px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
+                  fontFamily: 'Proxima Nova Regular, sans-serif',
                   fontWeight: "normal",
-                  letterSpacing: "0.1em", // Add letter spacing
+                  letterSpacing: "0.1em",
                 }}
               >
                 R I G H T&nbsp;&nbsp;A R M
@@ -145,45 +146,26 @@ export default function HomePage() {
       </div>
 
       {/* About Us Section (Page 02) */}
-      <div className="w-full" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8">
-          {/* Section Header */}
-          <div className="flex items-center justify-between p-8">
-            <span
-              style={{
-                fontSize: "12px",
-                fontFamily: '"Proxima Nova Regular", sans-serif',
-                fontWeight: "normal",
-                color: "#f4f5f3",
-              }}
-              className="text-white"
-            >
-              RIGHT ARM
-            </span>
-            <div className="text-white">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
-            </div>
-          </div>
-
+      <div className="w-full pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8">
           {/* Main Content */}
-          <div className="flex items-start gap-16 px-8 pb-4">
+          <div className="flex flex-col md:flex-row items-start gap-8 sm:gap-16 px-2 sm:px-8 pb-4">
             {/* Left - Image */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 w-full md:w-auto mb-4 md:mb-0 flex justify-center">
               <AnimatedDiv direction="left" delay={200}>
                 <Image
                   src="/second.png"
                   alt="Modern hotel room"
-                  width={660}
-                  height={450}
-                  className="object-cover"
-                  priority // Added priority for faster loading
+                  width={340}
+                  height={220}
+                  className="object-cover rounded-lg w-full max-w-[340px] sm:max-w-[660px] h-auto"
+                  priority
                 />
               </AnimatedDiv>
             </div>
-
             {/* Right - Content */}
-            <div className="flex-1">
-              <div className="pl-8">
+            <div className="flex-1 w-full md:w-auto">
+              <div className="pl-0 md:pl-8">
                 {" "}
                 {/* Added pl-8 to align all text content consistently */}
                 <AnimatedDiv direction="right" delay={200}>
@@ -227,51 +209,25 @@ export default function HomePage() {
       </div>
 
       {/* New Section - Page 03 */}
-      <div className="w-full min-h-screen" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8 flex flex-col h-full">
-          {/* Section Header */}
-          <header className="flex items-center justify-between p-8">
-            {/* Top Left - Right Arm */}
-            <div className="text-white">
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
-                  fontWeight: "normal",
-                  color: "#f4f5f3",
-                }}
-              >
-                RIGHT ARM
-              </span>
-            </div>
-
-            {/* Top Right - Logo */}
-            <div className="text-white">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
-            </div>
-          </header>
-
+      <div className="w-full min-h-screen pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8 flex flex-col h-full">
           {/* Main Content - Image Left, Text/List Right */}
-          <div className="flex flex-1 items-center justify-center px-8 pb-8 gap-12">
-            {" "}
-            {/* Changed flex-col to flex, items-center to items-start, and added gap-12 */}
+          <div className="flex flex-col md:flex-row flex-1 items-center justify-center px-2 sm:px-8 pb-8 gap-8 sm:gap-12">
             {/* Left - Image */}
-            <div className="flex-shrink-0 flex flex-col justify-center h-full">
-              {" "}
-              {/* Added flex-col justify-center h-full for vertical centering */}
+            <div className="flex-shrink-0 flex flex-col justify-center h-full w-full md:w-auto mb-4 md:mb-0">
               <AnimatedDiv direction="left" delay={200}>
                 <Image
                   src="/third.png"
                   alt="Modern hotel lobby with tree and fountain"
-                  width={600}
-                  height={360}
-                  className="object-cover rounded-lg shadow-lg"
+                  width={320}
+                  height={192}
+                  className="object-cover rounded-lg shadow-lg w-full max-w-[320px] sm:max-w-[600px] h-auto"
                   priority
                 />
               </AnimatedDiv>
             </div>
             {/* Right - Services List and Title */}
-            <div className="flex-1 pt-0">
+            <div className="flex-1 w-full md:w-auto pt-0">
               {/* Heading and Line */}
               <AnimatedDiv direction="right" delay={300}>
                 <div className="flex flex-col items-center mb-4">
@@ -536,36 +492,17 @@ export default function HomePage() {
       </div>
 
       {/* Our Business Section - Page 04 */}
-      <div className="w-full" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8">
+      <div className="w-full pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8">
           {/* Section Header - Adjusted for Page 04 */}
-          <header className="flex items-center justify-between p-8">
-            {/* RIGHT ARM on the left */}
-            <div className="text-white">
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
-                  fontWeight: "normal",
-                  color: "#f4f5f3",
-                }}
-              >
-                RIGHT ARM
-              </span>
-            </div>
-
+          <header className="flex flex-col items-center justify-center p-8">
             {/* Center - Title */}
             <div className="flex flex-col items-center">
-              <h2 style={{ fontSize: "45px", fontFamily: '"The Seasons", serif', color: "#ada070" }} className="mb-0">Our business</h2>
-              <div className='flex flex-row-reverse items-center gap-4 w-full self-end justify-start'>
-                <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070' }}>أعمالنا</p>
+              <h2 style={{ fontSize: "45px", fontFamily: 'The Seasons, serif', color: "#ada070", textAlign: 'center' }} className="mb-0">Our business</h2>
+              <div className='flex flex-row-reverse items-center gap-4 w-full justify-center'>
+                <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070', textAlign: 'center' }}>أعمالنا</p>
                 <div className='w-40 h-0.5' style={{ backgroundColor: '#ada070' }}></div>
               </div>
-            </div>
-
-            {/* Logo on the right */}
-            <div className="text-white pl-8">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
             </div>
           </header>
 
@@ -620,36 +557,17 @@ export default function HomePage() {
       </div>
 
       {/* Our Facilities Section - Page 05 (Now "Our Business") */}
-      <div className="w-full" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8">
+      <div className="w-full pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8">
           {/* Section Header - Consistent with Page 04's new layout */}
-          <header className="flex items-center justify-between p-8">
-            {/* RIGHT ARM on the left */}
-            <div className="text-white">
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
-                  fontWeight: "normal",
-                  color: "#f4f5f3",
-                }}
-              >
-                RIGHT ARM
-              </span>
-            </div>
-
+          <header className="flex flex-col items-center justify-center p-8">
             {/* Center - Title changed to "Our business" */}
             <div className="flex flex-col items-center">
-              <h2 style={{ fontSize: "45px", fontFamily: '"The Seasons", serif', color: "#ada070" }} className="mb-0">Our business</h2>
-              <div className='flex flex-row-reverse items-center gap-4 justify-start w-full'>
-                <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070' }}>أعمالنا</p>
+              <h2 style={{ fontSize: "45px", fontFamily: 'The Seasons, serif', color: "#ada070", textAlign: 'center' }} className="mb-0">Our business</h2>
+              <div className='flex flex-row-reverse items-center gap-4 justify-center w-full'>
+                <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070', textAlign: 'center' }}>أعمالنا</p>
                 <div className='w-40 h-0.5' style={{ backgroundColor: '#ada070' }}></div>
               </div>
-            </div>
-
-            {/* Logo on the right */}
-            <div className="text-white pl-8">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
             </div>
           </header>
 
@@ -720,40 +638,21 @@ export default function HomePage() {
       </div>
 
       {/* Our Gallery Section - Page 06 (New Page) */}
-      <div className="w-full" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8">
+      <div className="w-full pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8">
           {/* Section Header - Consistent with Page 04 & 05 layout */}
-          <header className="flex items-center justify-between p-8">
-            {/* RIGHT ARM on the left */}
-            <div className="text-white">
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
-                  fontWeight: "normal",
-                  color: "#f4f5f3",
-                }}
-              >
-                RIGHT ARM
-              </span>
-            </div>
-
+          <header className="flex flex-col items-center justify-center p-8">
             {/* Center - Title changed to "Our business" */}
             <div className="flex flex-col items-center">
               <AnimatedDiv direction="down" delay={200}>
-                <h2 style={{ fontSize: "45px", fontFamily: '"The Seasons", serif', color: "#ada070" }} className="mb-0">Our business</h2>
+                <h2 style={{ fontSize: "45px", fontFamily: 'The Seasons, serif', color: "#ada070", textAlign: 'center' }} className="mb-0">Our business</h2>
               </AnimatedDiv>
               <AnimatedDiv direction="down" delay={300}>
-                <div className='flex flex-row-reverse items-center gap-4 justify-start w-full'>
-                  <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070' }}>أعمالنا</p>
+                <div className='flex flex-row-reverse items-center gap-4 justify-center w-full'>
+                  <p className='text-right' style={{ fontSize: '45px', fontFamily: 'The Seasons, serif', color: '#ada070', textAlign: 'center' }}>أعمالنا</p>
                   <div className='w-40 h-0.5' style={{ backgroundColor: '#ada070' }}></div>
                 </div>
               </AnimatedDiv>
-            </div>
-
-            {/* Logo on the right */}
-            <div className="text-white pl-8">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
             </div>
           </header>
 
@@ -806,34 +705,14 @@ export default function HomePage() {
       </div>
 
       {/* New Section - Page 07 */}
-      <div className="w-full" style={{ backgroundColor: "#161616" }}>
-        <div className="max-w-screen-2xl mx-auto px-8">
+      <div className="w-full pt-16 sm:pt-24" style={{ backgroundColor: "#161616" }}>
+        <div className="max-w-screen-2xl mx-auto px-2 sm:px-8">
           {/* Section Header */}
-          <header className="flex items-start justify-between p-8">
-            {/* Top Left - Right Arm */}
-            <div className="text-white">
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontFamily: '"Proxima Nova Regular", sans-serif',
-                  fontWeight: "normal",
-                  color: "#f4f5f3",
-                }}
-              >
-                RIGHT ARM
-              </span>
-            </div>
-
-            {/* Top Right - Logo */}
-            <div className="text-white">
-              <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
-            </div>
-          </header>
-
+          {/* Removed logo and RIGHT ARM here */}
           <div className="flex flex-col items-center py-8">
-            <div className="bg-[#111] rounded-lg" style={{
-              width: 1000,
-              height: 600,
+            <div className="bg-[#111] rounded-lg w-full max-w-[98vw] sm:max-w-[1000px]" style={{
+              height: 'auto',
+              minHeight: 220,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -845,8 +724,8 @@ export default function HomePage() {
             }}>
               <video
                 ref={videoRef}
-                width={980}
-                height={580}
+                width={"100%"}
+                height={"100%"}
                 controls
                 muted={muted}
                 onTimeUpdate={handleTimeUpdate}
@@ -854,11 +733,8 @@ export default function HomePage() {
                 onEnded={() => { setEnded(true); setPlaying(false); }}
                 onPause={() => { if (!videoRef.current?.ended) setPlaying(false); }}
                 onSeeking={() => setUserInteracted(true)}
-                style={{
-                  width: 980,
-                  height: 580,
-                  borderRadius: 16,
-                }}
+                className="rounded-lg w-full h-auto max-h-[220px] sm:max-h-[580px]"
+                style={{ borderRadius: 16 }}
               >
                 <source src="/vid1.mp4" type="video/mp4" />
                 {"Your browser does not support the video tag."}
@@ -902,7 +778,7 @@ export default function HomePage() {
       </div>
 
       {/* New Section - Page 08 (Thank You Page) */}
-      <div className="relative min-h-screen w-full overflow-hidden">
+      <div className="relative min-h-screen w-full overflow-hidden pt-16 sm:pt-24">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image src="/Page8.png" alt="Hotel exterior at night with pool" fill className="object-cover" priority />
@@ -913,30 +789,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 flex min-h-screen flex-col">
           {/* Header */}
-          <header className="p-8">
-            <div className="max-w-screen-2xl mx-auto px-8 flex justify-between w-full">
-              {/* Top Left - Right Arm */}
-              <div className="text-white">
-                <span
-                  style={{
-                    fontSize: "12px",
-                    fontFamily: '"Proxima Nova Regular", sans-serif',
-                    fontWeight: "normal",
-                    color: "#f4f5f3",
-                  }}
-                >
-                  RIGHT ARM
-                </span>
-              </div>
-
-              {/* Top Right - Logo */}
-              <div className="text-white">
-                <Image src="/logo2.png" alt="Right Arm Logo" width={64} height={64} />
-              </div>
-            </div>
-          </header>
-
-          {/* Main Content - Center */}
+          {/* Removed logo and RIGHT ARM here */}
           <main className="flex flex-1 flex-col items-center justify-center px-8">
             <AnimatedDiv direction="down" delay={200} className="text-center text-white">
               <h1
